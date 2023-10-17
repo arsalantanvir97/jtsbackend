@@ -9,6 +9,7 @@ const multer = require('multer')
 const pageRoutes = require('./routes/pageRoutes.js')
 const commentRoutes = require('./routes/commentRoutes.js')
 const supportRoutes = require('./routes/supportRoutes.js')
+const newsRoutes = require('./routes/newsRoutes.js')
 
 const { fileFilter, fileStorage } = require('./multer.js')
 
@@ -41,6 +42,7 @@ app.use('/api/auth', authRoutes)
 app.use('/api/page', pageRoutes)
 app.use('/api/comment', commentRoutes)
 app.use('/api/support', supportRoutes)
+app.use('/api/news', newsRoutes)
 
 app.get('/uploads/:name', (req, res) => {
   // const myURL  = new URL(req.url)
